@@ -11,7 +11,7 @@ struct stack
 
 int isFull(struct stack *st)
 {
-    if (st->top == st->size - 1)
+    if (st->top >= st->size - 1)
         return 1;
     else
         return 0;
@@ -68,6 +68,8 @@ int main()
     push(st, 20);
     push(st, 10);
     push(st, 19);
+    push(st, 30);
+    push(st, 30);
     push(st, 30);
     display(st);
     // cout << " " << endl;
